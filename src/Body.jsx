@@ -17,15 +17,26 @@ const Body = () => {
 
       <div className=' py-16 '>
         <h1 className='font-bold font-sans justify-center items-center flex text-6xl'>Get set, connect</h1>
+        <div className='flex justify-center items-center gap-9 pt-6'>
+          <div className='flex'>
+            <img className='h-[25px] pr-2' src=".\src\assets\setup.svg" alt="" />
+            <span>Grow Yourself</span>
+          </div>
+
+          <div className='flex'>
+            <img className='h-[25px] pr-2' src=".\src\assets\vchat.svg" alt="" />
+            <span>Ask Nutritionist</span>
+          </div>
+        </div>
+        
         <div className="flex justify-center mb-6">
-                    <button className="px-4 py-2 border-b-4 border-blue-500 text-blue-500 font-semibold">Mobile</button>
-                    <button className="px-4 py-2 text-gray-600 hover:text-blue-500 hover:border-blue-500">AirFiber/Fiber</button>
+                    
                 </div>
-                <div  className='w-2/5 h-40 bg-blue-500 pt-5  space-x-4 mb-6  mx-auto rounded-[30px]'>
+                <div  className='w-2/5 h-40 bg-green-500 pt-5  space-x-4 mb-6  mx-auto rounded-[30px]'>
                 {/* Prepaid/Postpaid Toggle */}
-                <div className="flex ml-14 bg-blue-800 w-60 h-12 rounded-full">
-                    <button className="px-6 py-2 mx-1 my-1 bg-blue-500 text-white rounded-full font-medium">Prepaid</button>
-                    <button className="px-6 py-2  text-grey-900 rounded-full font-medium hover:bg-blue-500 hover:text-white ">Postpaid</button>
+                <div className="flex ml-14 bg-green-800 w-60 h-12 rounded-full">
+                    <button className="px-6 py-2 mx-1 my-1 bg-green-500 text-white rounded-full font-medium">Prepaid</button>
+                    <button className="px-6 py-2  text-grey-900 rounded-full font-medium hover:bg-green-500 hover:text-white ">Postpaid</button>
                 
                 </div>
                 
@@ -42,19 +53,8 @@ const Body = () => {
       
                 </div>
                 
-                
-                </div>
-        <div className='flex justify-center items-center gap-9 pt-6'>
-          <div className='flex'>
-            <img className='h-[25px] pr-2' src=".\src\assets\setup.svg" alt="" />
-            <span>Grow Yourself</span>
-          </div>
-
-          <div className='flex'>
-            <img className='h-[25px] pr-2' src=".\src\assets\vchat.svg" alt="" />
-            <span>Ask Nutritionist</span>
-          </div>
-        </div>
+      </div>
+        
 
       </div>
 
