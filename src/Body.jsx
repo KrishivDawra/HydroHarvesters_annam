@@ -35,23 +35,23 @@ const Body = () => {
 
           
             <div className=" "> 
-              <img src=".\src\assets\work-1.jpg" className='h-64 rounded-lg   ' alt="" />
-              <h2>Commercial Setups</h2>
+              <img src=".\src\assets\work-1.jpg" className='h-80 rounded-lg   ' alt="" />
+              <h2 className='font-semibold font-serif text-lg flex justify-center space-x-8'>Commercial Setups</h2>
             </div>
 
             <div className=" "> 
-              <img src=".\src\assets\work-1.jpg" className='h-64 rounded-lg ' alt="" />
-              <h2>Home Setups</h2>
+              <img src=".\src\assets\work-2.jpg" className='h-80 rounded-lg ' alt="" />
+              <h2 className='font-semibold font-serif text-lg flex justify-center space-x-8'>Home Setups</h2>
             </div>
 
             <div className=" "> 
-              <img src=".\src\assets\work-1.jpg" className='h-64 rounded-lg ' alt="" />
-              <h2>Conceltencies</h2>
+              <img src=".\src\assets\work-3.jpg" className='h-80 rounded-lg ' alt="" />
+              <h2 className='font-semibold font-serif text-lg flex justify-center space-x-8'>Conceltencies</h2>
             </div>
 
             <div className=" "> 
-              <img src=".\src\assets\work-1.jpg" className='h-64 rounded-lg ' alt="" />
-              <h2>Retail Section</h2>
+              <img src=".\src\assets\work-4.jpg" className='h-80 rounded-lg ' alt="" />
+              <h2 className='font-semibold font-serif text-lg flex justify-center space-x-8'>Retail Section</h2>
             </div>
           </div>
         </div>
