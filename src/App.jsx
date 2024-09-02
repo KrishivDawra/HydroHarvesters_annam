@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-    <div className=" py-6 bg-amber-50">
+    <div className="  bg-amber-50">
       <Header/>
       <Body/>
       <Footer/>
