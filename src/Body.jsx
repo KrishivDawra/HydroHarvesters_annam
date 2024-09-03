@@ -34,9 +34,9 @@ const Body = () => {
                 </div>
                 <div  className='w-2/5 h-40 bg-green-500 pt-5  space-x-4 mb-6  mx-auto rounded-[30px]'>
                 {/* Prepaid/Postpaid Toggle */}
-                <div className="flex ml-14 bg-green-800 w-60 h-12 rounded-full">
+                <div className="flex ml-14 bg-green-800 w-56 h-12 rounded-full">
                     <button className="px-6 py-2 mx-1 my-1 bg-green-500 text-white rounded-full font-medium">Prepaid</button>
-                    <button className="px-6 py-2  text-grey-900 rounded-full font-medium hover:bg-green-500 hover:text-white ">Postpaid</button>
+                    <button className="px-6 py-2 my-1 text-white rounded-full font-medium hover:bg-white hover:text-black ">Postpaid</button>
                 
                 </div>
                 
@@ -47,7 +47,7 @@ const Body = () => {
                         placeholder="+91 Jio Number" 
                         className="w-64 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:border-blue-500"
                     />
-                    <button className=" ml-2 px-6 py-2  text-black font-medium rounded-full bg-white hover:bg-blue-600 hover:text-white">
+                    <button className=" ml-2 px-6 py-2  text-black font-medium rounded-full bg-white hover:bg-green-900 hover:text-white">
                     Proceed
                 </button>
       
