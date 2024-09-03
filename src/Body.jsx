@@ -2,7 +2,7 @@ import React from 'react'
 
 const Body = () => {
   return (
-    <div className='pt-8 '>
+    <div className='pt-8 	'>
       <div className='flex px-16'>
         <div className='pt-24 pr-10 space-y-6'>
         <h1 className='font-serif text-6xl'>Hydro Harvesters: Cultivating Tomorrow’s Harvests, Today’s Savings!</h1>
