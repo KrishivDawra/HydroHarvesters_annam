@@ -1,7 +1,11 @@
 import React from 'react'
+import Header from './Header'
+import Footer from './Footer'
 
 const Body = () => {
   return (
+    <>
+    <Header/>
     <div className='pt-8 	'>
       <div className='flex px-16'>
         <div className='pt-24 pr-10 space-y-6'>
@@ -35,8 +39,8 @@ const Body = () => {
                 <div  className='w-2/5 h-40 bg-green-500 pt-5  space-x-4 mb-6  mx-auto rounded-[30px]'>
                 {/* Prepaid/Postpaid Toggle */}
                 <div className="flex ml-14 bg-green-800 w-56 h-12 rounded-full">
-                    <button className="px-6 py-2 mx-1 my-1 bg-green-500 text-white rounded-full font-medium">Prepaid</button>
-                    <button className="px-6 py-2 my-1 text-white rounded-full font-medium hover:bg-white hover:text-black ">Postpaid</button>
+                    <button className="px-6 py-2 mx-1 my-1 bg-green-500 text-white rounded-full font-medium">Existing</button>
+                    <button className="px-6 py-2  my-1 text-white rounded-full font-medium hover:bg-white hover:text-black "> New </button>
                 
                 </div>
                 
@@ -44,7 +48,7 @@ const Body = () => {
                 <div className="my-6 flex mx-auto justify-center">
                     <input 
                         type="text" 
-                        placeholder="+91 Jio Number" 
+                        placeholder="+91 Enter Number" 
                         className="w-64 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:border-blue-500"
                     />
                     <button className=" ml-2 px-6 py-2  text-black font-medium rounded-full bg-white hover:bg-green-900 hover:text-white">
@@ -115,6 +119,8 @@ const Body = () => {
 
 
     </div>
+    <Footer/>
+    </>
   )
 }
 
