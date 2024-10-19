@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
+import Footer from './Footer';
 
 export default function About() {
   const [currentSlide, setCurrentSlide] = useState(0); // State to keep track of the current slide
@@ -35,7 +36,7 @@ export default function About() {
   return (
     <>
       <Header />
-      <div className="relative w-full max-w-4xl mx-auto overflow-hidden pt-10">
+      <div className="relative w-full  mx-auto overflow-hidden ">
         {/* Slider Wrapper */}
         <div
           id="slider"
@@ -64,6 +65,7 @@ export default function About() {
           &#9654;
         </button>
       </div>
+      <Footer/>
     </>
   );
 }
