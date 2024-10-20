@@ -8,7 +8,6 @@ import Body from './Body.jsx'
 import About from './About.jsx'
 import Store from './store.jsx'
 import Consult from './Consult.jsx'
-import Login from './Login.jsx'
 let allroutes = createBrowserRouter(
   [
     {
@@ -26,10 +25,6 @@ let allroutes = createBrowserRouter(
     {
       path: 'consult',
       element:  <Consult/>
-    },
-    {
-      path: 'login',
-      element:  <Login/>
     }
   ]
 )

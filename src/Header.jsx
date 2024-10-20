@@ -8,7 +8,7 @@ const Header = () => {
     <>
     <div className={`modeloverlay ${modelstatus?'modelshow':''}`} onClick={()=> setModelstatus(false)}></div>
     <div className={`modeldiv ${modelstatus?'showmodeldiv':''} `}>
-      <div className='fixed right-3 z-20 top-2'>
+      <div className='fixed right-3 z-500 top-2'>
       <span className='cursor-pointer p-1' onClick={()=> setModelstatus(false)}>&times;</span>
       </div>
       <div className='container relative mt-8 '>
@@ -21,7 +21,7 @@ const Header = () => {
 
          
           <div>
-                    <input className='w-full h-10 border-slate-900/400 border-2 rounded mb-3' type="password" class="form-control rounded border-white mb-3 " name="psw" placeholder="Password" required=""/>
+                    <input className='w-full h-10 w-full border-slate-900/400 border-2 rounded mb-3' type="password" class="form-control rounded border-white mb-3 " name="psw" placeholder="Password" required=""/>
           </div>
           
                            

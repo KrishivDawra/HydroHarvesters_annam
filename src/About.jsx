@@ -36,7 +36,7 @@ export default function About() {
   return (
     <>
       <Header />
-      <div className="relative w-full  mx-auto overflow-hidden ">
+      <div className="relative w-full z-5  mx-auto overflow-hidden ">
         {/* Slider Wrapper */}
         <div
           id="slider"
