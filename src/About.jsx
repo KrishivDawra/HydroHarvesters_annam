@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import { Carousel } from "@material-tailwind/react";
 
 export default function About() {
   const [currentSlide, setCurrentSlide] = useState(0); // State to keep track of the current slide
@@ -36,7 +37,7 @@ export default function About() {
   return (
     <>
       <Header />
-      <div className="relative w-full z-5  mx-auto overflow-hidden ">
+      <div className="relative w-full   mx-auto overflow-hidden ">
         {/* Slider Wrapper */}
         <div
           id="slider"

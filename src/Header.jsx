@@ -21,7 +21,7 @@ const Header = () => {
 
          
           <div>
-                    <input className='w-full h-10 w-full border-slate-900/400 border-2 rounded mb-3' type="password" class="form-control rounded border-white mb-3 " name="psw" placeholder="Password" required=""/>
+                    <input className='w-full h-10 w-full border-slate-900/400 border-2 rounded mb-3' type="password"  name="psw" placeholder="Password" required=""/>
           </div>
           
                            

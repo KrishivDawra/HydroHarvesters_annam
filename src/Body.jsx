@@ -1,8 +1,11 @@
 import React from 'react'
 import Header from './Header'
 import Footer from './Footer'
+import { Link } from 'react-router-dom'
+import  { useState } from 'react'
 
 const Body = () => {
+  let [btnstatus,setBTNstatus] = useState(false)
   return (
     <>
     <Header/>
@@ -11,7 +14,7 @@ const Body = () => {
         <div className='pt-24 pr-10 space-y-6'>
         <h1 className='font-serif text-6xl'>Hydro Harvesters: Cultivating Tomorrow’s Harvests, Today’s Savings!</h1>
         <p className='text-gray-600 text-md'>Hydro Harvesters transforms farming with soil-free hydroponics, delivering 7x higher yields, top-notch quality, and affordable fresh produce—revolutionizing harvests, one plant at a time.</p>
-        <button className='bg-green-400 px-5 py-3 rounded-full hover:bg-green-600'>Order Now!</button>
+        <button className='bg-green-400 px-5 py-3 rounded-full hover:bg-green-600'><Link to={'/store'} >Order Now!</Link> </button>
       </div>
       
       <img className='h-[500px] rounded-xl' src=".\src\assets\home_page.jpg" alt="" />
@@ -39,8 +42,8 @@ const Body = () => {
                 <div  className='w-2/5 h-40 bg-green-500 pt-5  space-x-4 mb-6  mx-auto rounded-[30px]'>
                 {/* Prepaid/Postpaid Toggle */}
                 <div className="flex ml-14 bg-green-800 w-56 h-12 rounded-full">
-                    <button className="px-6 py-2 mx-1 my-1 bg-green-500 text-white rounded-full font-medium">Existing</button>
-                    <button className="px-6 py-2  my-1 text-white rounded-full font-medium hover:bg-white hover:text-black "> New </button>
+                    <button className= {` px-6 py-2 mx-1 my-1  text-white rounded-full font-medium ${btnstatus?'  hover:text-green-200':'bg-green-500'}`} onClick={()=> setBTNstatus(false)} >Existing</button>
+                    <button className={`px-8 py-2  my-1 text-white rounded-full font-medium  hover:text-green-200 ${btnstatus?'bg-green-500 ':'hover:text-green-200'} `} onClick={()=> setBTNstatus(true)}> New </button>
                 
                 </div>
                 
