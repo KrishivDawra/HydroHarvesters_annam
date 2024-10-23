@@ -66,6 +66,8 @@ export default function About() {
           &#9654;
         </button>
       </div>
+
+      
       <Footer/>
     </>
   );
