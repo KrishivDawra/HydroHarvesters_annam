@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import { Carousel } from "@material-tailwind/react";
 
 export default function About() {
   const [currentSlide, setCurrentSlide] = useState(0); // State to keep track of the current slide
