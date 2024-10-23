@@ -114,7 +114,7 @@ export default function Consult() {
         </div>
       </div>
     </div>
-          <div className="text-lg font-bold"><Link to={'/store'}>
+          <div className="text-lg font-bold"><Link to={'/'}>
           Farmtalk</Link></div>
         </div>
         {/* Profile Icon */}
