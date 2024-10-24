@@ -66,8 +66,39 @@ export default function About() {
         </button>
       </div>
 
-      
-      <Footer/>
+      <div className='p-4 space-y-8 lg:pt-14'>
+        <h1 className='text-5xl flex font-bold font-serif justify-center items-center md:text-7xl'>Working Areas</h1>
+        <div className='space-y-3 lg:flex lg:justify-center lg:items-center lg:space-x-8'>
+
+          <div className='md:flex md:justify-center md:items-center md:space-x-8'>
+            <div className='flex flex-col justify-center items-center'>
+              <img className='h-[250px] w-[250px] flex rounded-full' src=".\src\assets\mahrashtra.jpeg" alt="" />
+              <h1 className='text-2xl font-serif'>Mahrashta</h1>
+            </div>
+            <div className='flex flex-col justify-center items-center'>
+              <img className='h-[250px] w-[250px] flex rounded-full' src=".\src\assets\gujrat.jpeg" alt="" />
+              <h1 className='text-2xl font-serif'>Gujrat</h1>
+            </div>
+          </div>
+
+          <div  className='md:flex md:justify-center md:items-center md:space-x-8'>
+            <div className='flex flex-col justify-center items-center'>
+              <img className='h-[250px] w-[250px] flex rounded-full' src=".\src\assets\punjab.jpeg" alt="" />
+              <h1 className='text-2xl font-serif'>Punjab</h1>
+            </div>
+            <div className='flex flex-col justify-center items-center'>
+              <img className='h-[250px] w-[250px] flex rounded-full' src=".\src\assets\haryana.jpeg" alt="" />
+              <h1 className='text-2xl font-serif'>Haryana</h1>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div className='p-4 space-y-2 flex flex-col justify-center items-center lg:pt-14'>
+        <h1 className='text-3xl flex justify-center items-center font-serif font-bold md:text-6xl'>Our Dedicated Team!</h1>
+        <img className='flex rounded-xl lg:h-[500px] ' src=".\src\assets\team.jpg" alt="" />
+      </div>
     </>
   );
 }
