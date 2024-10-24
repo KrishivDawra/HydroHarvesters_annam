@@ -46,7 +46,7 @@ const Header = () => {
         </ul>
         <div className='py-5'>
             <a className='pr-2 cursor-pointer ' onClick={()=> setModelstatus(true)}>Login </a>
-            <button className='bg-gradient-to-r from-orange-400 to-red-500 px-4 py-2 rounded-xl '>Join Us</button>
+            <button className='bg-gradient-to-r from-orange-400 to-red-500 px-4 py-2 rounded-xl mr-2'>Join Us</button>
         </div>
     </div>
     </>
