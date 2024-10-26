@@ -121,6 +121,7 @@ export default function Consult() {
         <div className="w-10 h-10 rounded-full bg-white  flex items-center justify-center">
           {/* Placeholder for Profile Icon */}
           <div className="text-white text-xl">👤</div>
+          
         </div>
       </div>
 
