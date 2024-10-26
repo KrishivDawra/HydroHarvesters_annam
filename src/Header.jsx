@@ -152,7 +152,8 @@ const Header = () => {
       </div>
     </div>
           <div className="text-lg font-bold"><Link to={'/'}>
-          Farmtalk</Link></div>
+          <img className='h-[90px] w-[110px] rounded-full size-48 ' src=".\src\assets\logo123-removebg-preview.png" alt="" />
+</Link></div>
         </div>
         {/* Profile Icon */}
         <div className="w-10 h-10 rounded-full bg-white  flex items-center justify-center">
