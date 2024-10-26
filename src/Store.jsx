@@ -4,7 +4,9 @@ import Header from './Header'
 export default function Store() {
   return (
     <>
-    <Header/>
+    <div className='bg-green-400'>
+              <Header/>
+          </div>
     <div>
           <h1 className="flex justify-center items-center p-4 font-serif font-bold text-4xl">Future ready setups</h1>
       <div className='flex justify-center items-center gap-4'>

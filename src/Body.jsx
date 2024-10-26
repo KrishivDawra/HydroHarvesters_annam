@@ -8,7 +8,10 @@ const Body = () => {
   let [btnstatus,setBTNstatus] = useState(false)
   return (
     <>
+    <div className='bg-green-400'>
+
     <Header/>
+    </div>
     <div className='pt-8 	'>
       <div className='flex px-16'>
         <div className='pt-24 pr-10 space-y-6'>

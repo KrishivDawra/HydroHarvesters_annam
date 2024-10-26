@@ -34,8 +34,8 @@ export default function About() {
   }, [currentSlide]);
 
   return (
-    <>
-      <Header />
+    <><div className='bg-transparent fixed z-50 w-full'><Header /></div>
+      
       <div className="relative w-full   mx-auto overflow-hidden ">
         {/* Slider Wrapper */}
         <div
