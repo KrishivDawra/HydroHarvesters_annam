@@ -3,6 +3,18 @@ import Header from './Header';
 import Footer from './Footer';
 
 export default function About() {
+  const [stickyHeader, setStickyHeader] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 600) {
+        setStickyHeader(true);
+      } else {
+        setStickyHeader(false);
+      }
+    });
+  }, [stickyHeader]);
+
   const [currentSlide, setCurrentSlide] = useState(0); // State to keep track of the current slide
 
   const slides = [
@@ -34,7 +46,11 @@ export default function About() {
   }, [currentSlide]);
 
   return (
-    <><div className='bg-transparent fixed z-50 w-full'><Header /></div>
+    <><div className={` w-full fixed ${
+        stickyHeader
+          ? " lg:bg-green-400 "
+          : "bg-transparent  z-50"
+      }`}><Header /></div>
       
       <div className="relative w-full   mx-auto overflow-hidden ">
         {/* Slider Wrapper */}
