@@ -8,7 +8,9 @@ function farmer_section() {
     return (
       <>
       <div >
-        <Header/>
+          <div className='bg-green-400'>
+              <Header/>
+          </div>
         <div>
           <h1>Future ready setups</h1>
           <div>

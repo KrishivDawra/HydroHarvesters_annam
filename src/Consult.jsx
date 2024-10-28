@@ -3,6 +3,7 @@ import React from 'react'
 import  { useState } from 'react';
 
 import { Link } from 'react-router-dom'
+import Header from './Header';
 export default function Consult() {
   
   const [isOpen, setIsOpen] = useState(false);
@@ -10,9 +11,13 @@ export default function Consult() {
     <>
     
     <div>
+    <div className='bg-green-400 '>
+              <Header/>
+          </div>
     <div className="h-screen bg-white text-black flex flex-col items-center justify-center">
+    
       {/* Top bar */}
-      <div className="w-full px-6 py-3 flex justify-between items-center bg-green-400 fixed top-0">
+      <div className="w-full px-6 py-3 flex justify-between items-center bg-green-400 fixed top-0 lg:hidden">
         <div className="flex items-center space-x-2">
         <div className="relative">
       {/* Navbar */}
@@ -121,6 +126,7 @@ export default function Consult() {
         <div className="w-10 h-10 rounded-full bg-white  flex items-center justify-center">
           {/* Placeholder for Profile Icon */}
           <div className="text-white text-xl">👤</div>
+          
         </div>
       </div>
 
