@@ -2,11 +2,26 @@ import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 
+
 export default function About() {
+  const [stickyHeader, setStickyHeader] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 600) {
+        setStickyHeader(true);
+      } else {
+        setStickyHeader(false);
+      }
+    });
+  }, [stickyHeader]);
+
   const [currentSlide, setCurrentSlide] = useState(0); // State to keep track of the current slide
 
   const slides = [
     { src: './src/assets/slide-1.jpeg', alt: 'Description of Image 1' },
+    {src: './src/assets/slide-4.jpeg', alt: 'Description of Image 4' },
+    {src: './src/assets/h1.jpeg', alt: 'Description of Image 4' },
     { src: './src/assets/slide-2.jpeg', alt: 'Description of Image 2' },
     { src: './src/assets/slide-3.jpeg', alt: 'Description of Image 3' },
   ];
@@ -34,7 +49,11 @@ export default function About() {
   }, [currentSlide]);
 
   return (
-    <><div className='bg-transparent fixed z-50 w-full'><Header /></div>
+    <><div className={` w-full fixed text-pale_Green ${
+        stickyHeader
+          ? " lg:bg-green-400 "
+          : "bg-transparent  z-50"
+      }`}><Header /></div>
       
       <div className="relative w-full   mx-auto overflow-hidden ">
         {/* Slider Wrapper */}
@@ -54,15 +73,16 @@ export default function About() {
         {/* Navigation buttons */}
         <button
           onClick={prevSlide}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black text-white p-2"
+          className="absolute left-0 h-1/5 top-1/3 ml-3 transform -translate-y-1/2  text-white p-2"
         >
-           &#9664;
+           {/* &#9664; */}
+           <img src="./src/assets/backword.png" alt="" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2  bg-black text-white p-2"
+          className="absolute right-0 h-1/5 top-1/3  transform -translate-y-1/2   text-white p-2"
         >
-          &#9654;
+          <img  src="./src/assets/forward.png" alt="" />
         </button>
       </div>
 
