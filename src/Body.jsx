@@ -1,11 +1,11 @@
 import React from 'react'
 import Header from './Header'
-import Footer from './Footer'
 import { Link } from 'react-router-dom'
 import  { useState } from 'react'
 
 const Body = () => {
-  let [btnstatus,setBTNstatus] = useState(false)
+  let [btnstatus, setBTNstatus] = useState(false);
+
   return (
     <>
     <div className='bg-green-400'>
@@ -99,33 +99,22 @@ const Body = () => {
           <h1 className='text-5xl font-bold flex justify-center items-center'>Need guidance?</h1>
           <h2 className='text-lg flex justify-center items-center'>We would like to help you.</h2>
 
-          <div className='flex justify-center items-center gap-10'>
-            <div className='flex gap-1 bg-green-500 px-3 py-2 border-solid border-black  rounded-xl hover:border-white'>
-              <img src=".\src\assets\chat.png" alt="" />
+          <div className="flex flex-col lg:flex-row justify-center items-center gap-6 lg:gap-10">
+            <div className="flex gap-1 bg-green-500 px-3 py-2 border-solid border-black rounded-xl hover:border-white">
+              <img src="./src/assets/chat.png" alt="" />
               <button>Chat with us!</button>
             </div>
 
-            <div className='flex gap-1 bg-green-500 px-3 py-2  border-green-500 rounded-xl hover:border-white'>
-              <img src=".\src\assets\call.png" alt="" />
+            <div className="flex gap-1 bg-green-500 px-3 py-2 border-green-500 rounded-xl hover:border-white">
+              <img src="./src/assets/call.png" alt="" />
               <button>Contact Us!</button>
             </div>
-
           </div>
         </div>
-
-
-        
-
-      
-
-
-      
-
-
-    </div>
-    <Footer/>
+      </div>
+       
     </>
-  )
-}
+  );
+};
 
-export default Body
+export default Body;
