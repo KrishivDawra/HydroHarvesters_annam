@@ -10,11 +10,12 @@ export default function Store() {
     <div className='flex justify-center items-center flex-col'>
       
       <div className=' lg:box-border lg:border-1 lg:w-[1000px] lg:flex lg:justify-center lg:items-center lg:gap-x-5 lg:font-serif lg:p-6 lg:rounded-lg lg:border-collapse lg:border-black lg:shadow-lg lg:bg-slate-100 lg:text-md'>
-        <span>Setups</span>
-        <span>Automation</span>
-        <span>Fresh Vegetables</span>
-        <span>Nutirents</span>
-        <span>Calculator</span>
+      <span className='cursor-pointer'>Calculator</span>
+        <span><a href="#setup">Setups</a></span>
+        <span><a href="#automation">Automation</a></span>
+        <span><a href="#organic">Fresh Vegetables</a></span>
+        <span className='cursor-pointer'>Nutirents</span>
+        
       </div>
 
       <div className='lg:flex lg:flex-col lg:border-2 lg:w-[1000px] lg:gap-2 lg:p-2 lg:pt-3'>
@@ -54,7 +55,7 @@ export default function Store() {
 </div>
 
 
-      <h1 className='lg:text-4xl lg:font-serif lg:font-bold lg:pt-8 lg:pb-6'>HydroPonic Setups</h1>
+      <h1 className='lg:text-4xl lg:font-serif lg:font-bold lg:pt-8 lg:pb-6' id='setup'>HydroPonic Setups</h1>
 
       <div className='lg:flex lg:flex-col lg:gap-8'>
 
@@ -105,7 +106,7 @@ export default function Store() {
 
 
 
-      <h1 className='lg:text-4xl lg:font-serif lg:font-bold lg:pt-8 lg:pb-6'>Automation Services</h1>
+      <h1 className='lg:text-4xl lg:font-serif lg:font-bold lg:pt-8 lg:pb-6' id='automation'>Automation Services</h1>
 
       <div className='lg:flex lg:flex-col lg:gap-8'>
 
@@ -128,36 +129,36 @@ export default function Store() {
 
 
 
-      <h1 className='lg:text-4xl lg:font-serif lg:font-bold lg:pt-8 lg:pb-6'>Organic Vegetables</h1>
+      <h1 className='lg:text-4xl lg:font-serif lg:font-bold lg:pt-8 lg:pb-6' id='organic'>Organic Vegetables</h1>
 
       <div className='lg:flex lg:flex-col lg:gap-8'>
 
         <div className='lg:flex lg:justify-center lg:items-center lg:gap-x-6 '>
 
           <div className='lg:duration-300 hover:lg:scale-105 lg:pb-3 lg:rounded-md lg:border-2 lg:border-black lg:shadow-xl lg:box-border lg:flex-col lg:flex lg:justify-center lg:items-center lg:transition-shadow hover:lg:-translate-y-2 hover:lg:shadow-[0px_4px_15px_rgba(255,0,0,0.3)]'>
-            <img className='lg:w-52' src=".\src\assets\Vertical.jpeg" alt="Vertical Farming" />
-            <h1 className='text-lg'>Tomato</h1>
+            <img className='lg:w-52' src=".\src\assets\tomato.jpg" alt="Vertical Farming" />
+            <h1 className='text-xl'>Tomato</h1>
             <p>Rs. /-</p>
             <button className='lg:bg-green-500 lg:text-white lg:px-4 lg:py-2 lg:rounded-2xl'>Order Now</button>
           </div>
 
           <div className='lg:pb-3 lg:rounded-md lg:border-2 lg:border-black lg:shadow-md lg:flex-col lg:flex lg:justify-center lg:items-center lg:transition-transform lg:duration-300 lg:transition-shadow hover:lg:-translate-y-2 hover:lg:shadow-[0px_4px_15px_rgba(255,0,0,0.3)]'>
-            <img className='lg:w-52' src=".\src\assets\A shape.jpeg" alt="A-Shape Farming" />
-            <h1 className='text-lg'>Brocoli</h1>
+            <img className='lg:w-52' src=".\src\assets\brocali.jpg" alt="A-Shape Farming" />
+            <h1 className='text-xl'>Brocoli</h1>
             <p>Rs. /-</p>
             <button className='lg:bg-green-500 lg:text-white lg:px-4 lg:py-2 lg:rounded-2xl'>Order Now</button>
           </div>
 
           <div className='lg:pb-3 lg:rounded-md lg:border-2 lg:border-black lg:shadow-md lg:flex-col lg:flex lg:justify-center lg:items-center lg:transition-transform lg:duration-300 lg:transition-shadow hover:lg:-translate-y-2 hover:lg:shadow-[0px_4px_15px_rgba(255,0,0,0.3)]'>
-            <img className='lg:w-52' src=".\src\assets\H shape.jpeg" alt="H-Shape Farming" />
-            <h1 className='text-lg'>Carrot</h1>
+            <img className='lg:w-52' src=".\src\assets\carrot.jpg" alt="H-Shape Farming" />
+            <h1 className='text-xl'>Carrot</h1>
             <p>Rs. /-</p>
             <button className='lg:bg-green-500 lg:text-white lg:px-4 lg:py-2 lg:rounded-2xl'>Order Now</button>
           </div>
 
           <div className='lg:pb-3 lg:rounded-md lg:border-2 lg:border-black lg:shadow-md lg:flex-col lg:flex lg:justify-center lg:items-center lg:transition-transform lg:duration-300 lg:transition-shadow hover:lg:-translate-y-2 hover:lg:shadow-[0px_4px_15px_rgba(255,0,0,0.3)]'>
-            <img className='lg:w-52' src=".\src\assets\A shape.jpeg" alt="A-Shape Farming" />
-            <h1 className='text-lg'>Egg Plant</h1>
+            <img className='lg:w-52' src=".\src\assets\eggplant.jpg" alt="A-Shape Farming" />
+            <h1 className='text-xl'>Spinach</h1>
             <p>Rs. /-</p>
             <button className='lg:bg-green-500 lg:text-white lg:px-4 lg:py-2 lg:rounded-2xl'>Order Now</button>
           </div>
@@ -167,29 +168,29 @@ export default function Store() {
 
         <div className='lg:flex lg:justify-center lg:items-center lg:gap-x-6'>
           <div className='lg:pb-3 lg:rounded-md lg:border-2 lg:border-black lg:shadow-xl lg:box-border lg:flex-col lg:flex lg:justify-center lg:items-center lg:transition-transform lg:duration-300 lg:transition-shadow hover:lg:-translate-y-2 hover:lg:shadow-[0px_4px_15px_rgba(255,0,0,0.3)]'>
-            <img className='lg:w-52' src=".\src\assets\Vertical.jpeg" alt="Vertical Farming" />
-            <h1 className='text-lg'>Cucumber</h1>
+            <img className='lg:w-52' src=".\src\assets\cucumber.jpg" alt="Vertical Farming" />
+            <h1 className='text-xl'>Cucumber</h1>
             <p>Rs. /-</p>
             <button className='lg:bg-green-500 lg:text-white lg:px-4 lg:py-2 lg:rounded-2xl'>Order Now</button>
           </div>
 
           <div className='lg:pb-3 lg:rounded-md lg:border-2 lg:border-black lg:shadow-md lg:flex-col lg:flex lg:justify-center lg:items-center lg:transition-transform lg:duration-300 lg:transition-shadow hover:lg:-translate-y-2 hover:lg:shadow-[0px_4px_15px_rgba(255,0,0,0.3)]'>
-            <img className='lg:w-52' src=".\src\assets\A shape.jpeg" alt="A-Shape Farming" />
-            <h1 className='text-lg'>Chillies</h1>
+            <img className='lg:w-52' src=".\src\assets\chilli.jpg" alt="A-Shape Farming" />
+            <h1 className='text-xl'>Chillies</h1>
             <p>Rs. /-</p>
             <button className='lg:bg-green-500 lg:text-white lg:px-4 lg:py-2 lg:rounded-2xl'>Order Now</button>
           </div>
 
           <div className='lg:pb-3 lg:rounded-md lg:border-2 lg:border-black lg:shadow-md lg:flex-col lg:flex lg:justify-center lg:items-center lg:transition-transform lg:duration-300 lg:transition-shadow hover:lg:-translate-y-2 hover:lg:shadow-[0px_4px_15px_rgba(255,0,0,0.3)]'>
-            <img className='lg:w-52' src=".\src\assets\A shape.jpeg" alt="A-Shape Farming" />
-            <h1 className='text-lg'>Basil</h1>
+            <img className='lg:w-52' src=".\src\assets\basil.jpg" alt="A-Shape Farming" />
+            <h1 className='text-xl'>Basil</h1>
             <p>Rs. /-</p>
             <button className='lg:bg-green-500 lg:text-white lg:px-4 lg:py-2 lg:rounded-2xl'>Order Now</button>
           </div>
 
           <div className='lg:pb-3 lg:rounded-md lg:border-2 lg:border-black lg:shadow-md lg:flex-col lg:flex lg:justify-center lg:items-center lg:transition-transform lg:duration-300 lg:transition-shadow hover:lg:-translate-y-2 hover:lg:shadow-[0px_4px_15px_rgba(255,0,0,0.3)]'>
-            <img className='lg:w-52' src=".\src\assets\H shape.jpeg" alt="H-Shape Farming" />
-            <h1 className='text-lg'>Spinach</h1>
+            <img className='lg:w-52' src=".\src\assets\spinach.jpg" alt="H-Shape Farming" />
+            <h1 className='text-xl'>EGG Plant</h1>
             <p>Rs. /-</p>
             <button className='lg:bg-green-500 lg:text-white lg:px-4 lg:py-2 lg:rounded-2xl'>Order Now</button>
           </div>
