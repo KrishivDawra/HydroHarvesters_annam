@@ -2,17 +2,110 @@ import React from 'react'
 import Header from './Header'
 import { Link } from 'react-router-dom'
 import  { useState } from 'react'
+import { useEffect } from 'react'
 
 const Body = () => {
   let [btnstatus, setBTNstatus] = useState(false);
+  const [stickyHeader, setStickyHeader] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 600) {
+        setStickyHeader(true);
+      } else {
+        setStickyHeader(false);
+      }
+    });
+  }, [stickyHeader]);
+
+  const [currentSlide, setCurrentSlide] = useState(0); // State to keep track of the current slide
+
+  const slides = [
+    // { src: './src/assets/slide-1.jpeg', alt: 'Description of Image 1' },
+    // {src: './src/assets/slide-4.jpeg', alt: 'Description of Image 4' },
+    // {src: './src/assets/h1.jpeg', alt: 'Description of Image 4' },
+    // { src: './src/assets/slide-2.jpeg', alt: 'Description of Image 2' },
+    // { src: './src/assets/slide-3.jpeg', alt: 'Description of Image 3' },
+    {src: './src/assets/v3.mp4', alt:'something'},
+    {src: './src/assets/v4.mp4', alt:'something'},
+    {src: './src/assets/v1.mp4', alt:'something'},
+    {src: './src/assets/v2.mp4', alt:'something'},
+    {src: './src/assets/v5.mp4', alt:'something'},
+    
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length); // Move to the next slide; loop back to the start
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1)); // Move to the previous slide; loop back to the end
+  };
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 1750); // Change slide every 3 seconds
+    return () => clearInterval(interval); // Clear interval on unmount
+  }, []);
+
+  useEffect(() => {
+    if (currentSlide === 0) {
+      const timer = setTimeout(() => {
+        setCurrentSlide(0); // Set back to the first slide for a smoother transition
+      }, 1750); // Delay for half a second
+      return () => clearTimeout(timer);
+    }
+  }, [currentSlide]);
+
 
   return (
     <>
     <div className='bg-green-400'>
 
-    <Header/>
+    <div className={` w-full fixed  ${
+        stickyHeader
+          ? " lg:bg-green-400 text-black"
+          : "bg-transparent bg-blend-normal  z-50 text-pale_Green "
+      }`}><Header /></div>
+      
+      <div className="relative w-full   mx-auto overflow-hidden ">
+        {/* Slider Wrapper */}
+        <div
+          id="slider"
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{
+            transform: `translateX(-${currentSlide * 100}%)`,
+          }} // Slide transition
+        >
+          {slides.map((slide, index) => (
+            <div className="w-full flex-shrink-0" key={index}>
+              {/* <img src={slide.src} alt={slide.alt} className="w-full" /> */}
+              <video src={slide.src} autoPlay loop muted></video>
+            </div>
+          ))}
+        </div>
+        {/* Navigation buttons */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-0 h-1/5 top-1/3 ml-3 transform -translate-y-1/2  text-white p-2"
+        >
+           {/* &#9664; */}
+           <img src="./src/assets/backword.png" alt="" />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-0 h-1/5 top-1/3  transform -translate-y-1/2   text-white p-2"
+        >
+          <img  src="./src/assets/forward.png" alt="" />
+        </button>
+      </div>
+
+
+
+
     </div>
-    <div className='pt-8 	'>
+
+
+    <div className='pt-28	'>
       <div className='flex px-16'>
         <div className='pt-24 pr-10 space-y-6'>
         <h1 className='font-serif text-6xl'>Hydro Harvesters: Cultivating Tomorrow’s Harvests, Today’s Savings!</h1>
@@ -73,22 +166,22 @@ const Body = () => {
           <div className='flex flex-wrap justify-center space-x-8'>
             <div className="">
               <img src="./src/assets/work-1.jpg" className='h-80 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 overflow-hidden' alt="" />
-              <h2 className='font-semibold font-serif text-lg text-center'>Commercial Setups</h2>
+              <h2 className='font-semibold font-serif text-xl text-center'>Commercial Setups</h2>
             </div>
 
             <div className="">
               <img src="./src/assets/work-2.jpg" className='h-80 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 overflow-hidden' alt="" />
-              <h2 className='font-semibold font-serif text-lg text-center'>Home Setups</h2>
+              <h2 className='font-semibold font-serif text-xl text-center'>Home Setups</h2>
             </div>
 
             <div className="">
               <img src="./src/assets/work-3.jpg" className='h-80 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 overflow-hidden' alt="" />
-              <h2 className='font-semibold font-serif text-lg text-center'>Consultancies</h2>
+              <h2 className='font-semibold font-serif text-xl text-center'>Consultancies</h2>
             </div>
 
             <div className="">
               <img src="./src/assets/work-4.jpg" className='h-80 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 overflow-hidden' alt="" />
-              <h2 className='font-semibold font-serif text-lg text-center'>Retail Section</h2>
+              <h2 className='font-semibold font-serif text-xl text-center'>Retail Section</h2>
             </div>
           </div>
         </div>

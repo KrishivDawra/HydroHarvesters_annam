@@ -55,7 +55,8 @@ export default function About() {
   }, [currentSlide]);
 
   return (
-    <><div className={` w-full fixed  ${
+    <>
+    <div className={` w-full fixed  ${
         stickyHeader
           ? " lg:bg-green-400 text-black"
           : "bg-transparent bg-blend-normal  z-50 text-pale_Green "
