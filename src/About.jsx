@@ -19,11 +19,17 @@ export default function About() {
   const [currentSlide, setCurrentSlide] = useState(0); // State to keep track of the current slide
 
   const slides = [
-    { src: './src/assets/slide-1.jpeg', alt: 'Description of Image 1' },
-    {src: './src/assets/slide-4.jpeg', alt: 'Description of Image 4' },
-    {src: './src/assets/h1.jpeg', alt: 'Description of Image 4' },
-    { src: './src/assets/slide-2.jpeg', alt: 'Description of Image 2' },
-    { src: './src/assets/slide-3.jpeg', alt: 'Description of Image 3' },
+    // { src: './src/assets/slide-1.jpeg', alt: 'Description of Image 1' },
+    // {src: './src/assets/slide-4.jpeg', alt: 'Description of Image 4' },
+    // {src: './src/assets/h1.jpeg', alt: 'Description of Image 4' },
+    // { src: './src/assets/slide-2.jpeg', alt: 'Description of Image 2' },
+    // { src: './src/assets/slide-3.jpeg', alt: 'Description of Image 3' },
+    {src: './src/assets/v3.mp4', alt:'something'},
+    {src: './src/assets/v4.mp4', alt:'something'},
+    {src: './src/assets/v1.mp4', alt:'something'},
+    {src: './src/assets/v2.mp4', alt:'something'},
+    {src: './src/assets/v5.mp4', alt:'something'},
+    
   ];
 
   const nextSlide = () => {
@@ -35,7 +41,7 @@ export default function About() {
   };
 
   useEffect(() => {
-    const interval = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    const interval = setInterval(nextSlide, 1750); // Change slide every 3 seconds
     return () => clearInterval(interval); // Clear interval on unmount
   }, []);
 
@@ -43,16 +49,16 @@ export default function About() {
     if (currentSlide === 0) {
       const timer = setTimeout(() => {
         setCurrentSlide(0); // Set back to the first slide for a smoother transition
-      }, 500); // Delay for half a second
+      }, 1750); // Delay for half a second
       return () => clearTimeout(timer);
     }
   }, [currentSlide]);
 
   return (
-    <><div className={` w-full fixed text-pale_Green ${
+    <><div className={` w-full fixed  ${
         stickyHeader
-          ? " lg:bg-green-400 "
-          : "bg-transparent  z-50"
+          ? " lg:bg-green-400 text-black"
+          : "bg-transparent bg-blend-normal  z-50 text-pale_Green "
       }`}><Header /></div>
       
       <div className="relative w-full   mx-auto overflow-hidden ">
@@ -66,7 +72,8 @@ export default function About() {
         >
           {slides.map((slide, index) => (
             <div className="w-full flex-shrink-0" key={index}>
-              <img src={slide.src} alt={slide.alt} className="w-full" />
+              {/* <img src={slide.src} alt={slide.alt} className="w-full" /> */}
+              <video src={slide.src} autoPlay loop muted></video>
             </div>
           ))}
         </div>
@@ -86,7 +93,7 @@ export default function About() {
         </button>
       </div>
 
-      <div className='p-4 space-y-8 lg:pt-14'>
+      <div className='p-4 space-y-8 lg:pt-20'>
         <h1 className='text-5xl flex font-bold font-serif justify-center items-center md:text-7xl'>Working Areas</h1>
         <div className='space-y-3 lg:flex lg:justify-center lg:items-center lg:space-x-8'>
 
