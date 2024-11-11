@@ -164,23 +164,23 @@ const Body = () => {
       <div className='pb-16'>
           <h1 className='justify-center items-center flex text-4xl lg:text-6xl font-serif font-bold pb-8'>Our working areas!</h1>
           <div className='flex flex-wrap justify-center space-x-8'>
-            <div className="">
-              <img src="./src/assets/work-1.jpg" className='h-80 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 overflow-hidden' alt="" />
+            <div >
+              <img src="./src/assets/work-1.jpg" className='h-80 rounded-lg   ' alt="" />
               <h2 className='font-semibold font-serif text-xl text-center'>Commercial Setups</h2>
             </div>
 
             <div className="">
-              <img src="./src/assets/work-2.jpg" className='h-80 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 overflow-hidden' alt="" />
+              <img src="./src/assets/work-2.jpg" className='h-80 rounded-lg  ' alt="" />
               <h2 className='font-semibold font-serif text-xl text-center'>Home Setups</h2>
             </div>
 
             <div className="">
-              <img src="./src/assets/work-3.jpg" className='h-80 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 overflow-hidden' alt="" />
+              <img src="./src/assets/work-3.jpg" className='h-80 rounded-lg  ' alt="" />
               <h2 className='font-semibold font-serif text-xl text-center'>Consultancies</h2>
             </div>
 
             <div className="">
-              <img src="./src/assets/work-4.jpg" className='h-80 rounded-lg transition-transform duration-300 ease-in-out transform hover:scale-110 overflow-hidden' alt="" />
+              <img src="./src/assets/work-4.jpg" className='h-80 rounded-lg  ' alt="" />
               <h2 className='font-semibold font-serif text-xl text-center'>Retail Section</h2>
             </div>
           </div>

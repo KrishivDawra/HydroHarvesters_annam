@@ -12,28 +12,65 @@ const Header = () => {
       <div className='fixed right-3 z-500 top-2'>
       <span className='cursor-pointer p-1' onClick={()=> setModelstatus(false)}>&times;</span>
       </div>
-      <div className='container relative mt-8 '>
-        <h1 className='font-serif subpixel-antialiased tracking-wide line-clamp-1 text-center text-2xl '> Login</h1>
-        <div className='m-2'>
-        <form action="/" method='post'>
+      <div className="flex items-center justify-center  bg-gradient-to-br from-emerald-300 to- p-4">
+      <div className="w-full max-w-md p-10 bg-white rounded-lg shadow-lg">
+        <h1
+          className="text-4xl mb-2 font-bold text-center text-gray-800 "
+          style={{ fontFamily: 'Playfair Display, serif' }}
+        >
+          Login
+        </h1>
+
+        <form action="/" method="post" className="space-y-6">
+          {/* Username Field */}
           <div>
-          <input type="text" className=" rounded w-full my-3 h-10 border-slate-900/400 border-2" name="uname" id="name" placeholder="Username" required=""/>
+            <input
+              type="text"
+              name="uname"
+              id="name"
+              placeholder="Username"
+              required
+              className="w-full px-4 py-2 text-lg rounded-full border border-gray-400 focus:border-green-700 focus:outline-none shadow"
+              style={{ fontFamily: 'Roboto, sans-serif' }}
+            />
           </div>
 
-         
+          {/* Password Field */}
           <div>
-                    <input className='w-full h-10 w-full border-slate-900/400 border-2 rounded mb-3' type="password"  name="psw" placeholder="Password" required=""/>
+            <input
+              type="password"
+              name="psw"
+              placeholder="Password"
+              required
+              className="w-full px-4 py-2 text-lg rounded-full border border-gray-400 focus:border-green-700 focus:outline-none shadow"
+              style={{ fontFamily: 'Roboto, sans-serif' }}
+            />
           </div>
-          
-                           
-          
-          <div className='mt-2 text-center'>
-                <button className='bg-green-300  mr-auto rounded p-2'>Submit</button>
+
+          {/* Submit Button */}
+          <div className="text-center">
+            <button
+              className="w-full py-2 text-lg font-semibold text-white bg-gradient-to-br from-emerald-300 to-emerald-500 rounded-full hover:border border-green-800  shadow-lg focus:outline-none"
+              style={{ fontFamily: 'Roboto, sans-serif' }}
+            >
+              Login
+            </button>
           </div>
-         
         </form>
-        </div>
+
+        {/* Additional Text */}
+        <p
+          className="mt-4 text-center text-gray-600 text-sm"
+          style={{ fontFamily: 'Roboto, sans-serif' }}
+        >
+          Don’t have an account?{" "}
+          <span className="text-green-700 hover:underline hover:text-green-500 cursor-pointer">
+            Sign up
+          </span>
+        </p>
       </div>
+    </div>
+
       
     </div>
     <div className='lg:flex lg:justify-between lg:bg-transparent lg:align-baseline hidden'>
