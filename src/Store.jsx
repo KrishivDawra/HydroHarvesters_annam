@@ -11,11 +11,12 @@ export default function Store() {
     
     <div className='flex justify-center items-center flex-col pt-5'>
       
-      <div className=' lg:box-border lg:border-1 lg:w-[1000px] lg:flex lg:justify-center lg:items-center lg:gap-x-5 lg:font-serif lg:p-6 lg:rounded-lg lg:border-collapse lg:border-black lg:shadow-lg lg:bg-slate-100 lg:text-md'>
-      <span className='cursor-pointer'>Calculator</span>
-        <span><a href="#setup">Setups</a></span>
-        <span><a href="#automation">Automation</a></span>
-        <span><a href="#organic">Fresh Vegetables</a></span>
+      <div className='box-border border-black border-collapse border-3 lg:box-border lg:border-1 lg:w-[1000px] lg:flex lg:justify-center lg:items-center lg:gap-x-5 lg:font-serif lg:p-6 lg:rounded-lg lg:border-collapse lg:border-black lg:shadow-lg lg:bg-slate-100 lg:text-md font-serif font-bold flex justify-center items-center gap-x-3 '>
+        <span className='cursor-pointer hidden md:inline'>Calculator</span>
+        <span className=' '><a href="#setup">Setups</a></span>
+        <span className=' '><a href="#automation">Automation</a></span>
+        <span className='hidden md:inline'><a href="#organic ">Fresh Vegetables</a></span>
+        <span className='lg:hidden'><a href="#organic ">veggies</a></span>
         <span className='cursor-pointer'>Nutirents</span>
         
       </div>
