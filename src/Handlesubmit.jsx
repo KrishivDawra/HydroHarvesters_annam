@@ -24,5 +24,5 @@ export function Handlesubmit(event) {
             profit = areaValue * 15;
         }
         // Display result
-        result.textContent = `Estimated Profit: ₹${profit}`;
+        result.textContent = `Estimated Cost: ₹${profit}`;
     }
