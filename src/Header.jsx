@@ -1,8 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Login.css'
 import { Link } from 'react-router-dom'
-
+import {
+  RiMenu3Fill,
+  RiCloseFill,
+  RiMoonFill,
+  RiSunFill,
+} from "react-icons/ri";
 const Header = () => {
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
+  };
+
+
   const [isOpen, setIsOpen] = useState(false);
   let [modelstatus,setModelstatus] = useState(false)
   return (
@@ -12,41 +29,83 @@ const Header = () => {
       <div className='fixed right-3 z-500 top-2'>
       <span className='cursor-pointer p-1' onClick={()=> setModelstatus(false)}>&times;</span>
       </div>
-      <div className='container relative mt-8 '>
-        <h1 className='font-serif subpixel-antialiased tracking-wide line-clamp-1 text-center text-2xl '> Login</h1>
-        <div className='m-2'>
-        <form action="/" method='post'>
+      <div className="flex items-center justify-center  bg-gradient-to-br from-emerald-300 to- p-4">
+      <div className="w-full max-w-md p-10 bg-white rounded-lg shadow-lg">
+        <h1
+          className="text-4xl mb-2 font-bold text-center text-gray-800 "
+          style={{ fontFamily: 'Playfair Display, serif' }}
+        >
+          Login
+        </h1>
+
+        <form action="/" method="post" className="space-y-6">
+          {/* Username Field */}
           <div>
-          <input type="text" className=" rounded w-full my-3 h-10 border-slate-900/400 border-2" name="uname" id="name" placeholder="Username" required=""/>
+            <input
+              type="text"
+              name="uname"
+              id="name"
+              placeholder="Username"
+              required
+              className="w-full px-4 py-2 text-lg rounded-full border border-gray-400 focus:border-green-700 focus:outline-none shadow"
+              style={{ fontFamily: 'Roboto, sans-serif' }}
+            />
           </div>
 
-         
+          {/* Password Field */}
           <div>
-                    <input className='w-full h-10 w-full border-slate-900/400 border-2 rounded mb-3' type="password"  name="psw" placeholder="Password" required=""/>
+            <input
+              type="password"
+              name="psw"
+              placeholder="Password"
+              required
+              className="w-full px-4 py-2 text-lg rounded-full border border-gray-400 focus:border-green-700 focus:outline-none shadow"
+              style={{ fontFamily: 'Roboto, sans-serif' }}
+            />
           </div>
-          
-                           
-          
-          <div className='mt-2 text-center'>
-                <button className='bg-green-300  mr-auto rounded p-2'>Submit</button>
+
+          {/* Submit Button */}
+          <div className="text-center">
+            <button
+              className="w-full py-2 text-lg font-semibold text-white bg-gradient-to-br from-emerald-300 to-emerald-500 rounded-full hover:border border-green-800  shadow-lg focus:outline-none"
+              style={{ fontFamily: 'Roboto, sans-serif' }}
+            >
+              Login
+            </button>
           </div>
-         
         </form>
-        </div>
+
+        {/* Additional Text */}
+        <p
+          className="mt-4 text-center text-gray-600 text-sm"
+          style={{ fontFamily: 'Roboto, sans-serif' }}
+        >
+          Don’t have an account?{" "}
+          <span className="text-green-700 hover:underline hover:text-green-500 cursor-pointer">
+            Sign up
+          </span>
+        </p>
       </div>
+    </div>
+
       
     </div>
-    <div className='lg:flex lg:justify-between lg:bg-transparent lg:align-baseline hidden'>
+    <div className=' lg:flex lg:justify-between lg:bg-transparent lg:align-baseline hidden'>
       <img className='h-[90px] w-[110px] rounded-full size-48 ' src=".\src\assets\logo123-removebg-preview.png" alt="" />
         <ul className='lg:flex lg:space-x-4 lg:py-8 lg:text-inherit '>
-            <li className='font-serif font-semibold  hover:text-black'><Link to = {'/'}> Home</Link></li>
-            <li className='font-serif font-semibold  hover:text-black'><Link to={'/store'}>Products</Link></li>
-            <li className='font-serif font-semibold  hover:text-black'><Link to={'/consult'}>consultencies</Link></li>
-            <li className='font-serif font-semibold  hover:text-black'><Link to={'/About-us'}> About Us</Link></li>
+            <li className='font-serif font-semibold dark:hover:text-black pl-40 hover:text-black'><Link to = {'/'}> Home</Link></li>
+            <li className='font-serif font-semibold dark:hover:text-black hover:text-black'><Link to={'/store'}>Products</Link></li>
+            <li className='font-serif font-semibold dark:hover:text-black hover:text-black'><Link to={'/consult'}>consultencies</Link></li>
+            <li className='font-serif font-semibold dark:hover:text-black hover:text-black'><Link to={'/About-us'}> About Us</Link></li>
+            
         </ul>
+        <div>
+        </div>
         <div className='py-5'>
-            <a className='pr-2 cursor-pointer ' onClick={()=> setModelstatus(true)}>Login </a>
-            <button className='bg-gradient-to-r from-orange-400 to-red-500 px-4 py-2 rounded-xl mr-2'>Join Us</button>
+        <a onClick={toggleTheme} className="   fixed right-40   cursor-pointer  mr-2 mt-2.5 text-black  dark:text-white text-[1.3rem] ">{theme === "light" ? <RiMoonFill /> : <RiSunFill />} </a>
+        
+          <a className='pr-2 cursor-pointer  ' onClick={()=> setModelstatus(true)}>Login </a>
+          <button className='bg-gradient-to-r from-orange-400 to-red-500 px-4 py-2 rounded-xl mr-2'>Join Us</button>
         </div>
     </div>
     <div className="w-full px-6 py-3 flex justify-between items-center bg-transparent  top-0 lg:hidden">

@@ -56,13 +56,14 @@ export default function About() {
 
   return (
     <>
+    <div className='dark:bg-gray-900 dark:text-white'>
     <div className={` w-full fixed  ${
         stickyHeader
-          ? " lg:bg-green-400 text-black"
+          ? " lg:bg-green-400 text-black dark:text-white  dark:bg-transparent dark:bg-blend-normal"
           : "bg-transparent bg-blend-normal  z-50 text-pale_Green "
       }`}><Header /></div>
       
-      <div className="relative w-full   mx-auto overflow-hidden ">
+      <div className="relative w-full   mx-auto overflow-hidden  ">
         {/* Slider Wrapper */}
         <div
           id="slider"
@@ -126,6 +127,7 @@ export default function About() {
       <div className='p-4 space-y-2 flex flex-col justify-center items-center lg:pt-14'>
         <h1 className='text-3xl flex justify-center items-center font-serif font-bold md:text-6xl'>Our Dedicated Team!</h1>
         <img className='flex rounded-xl lg:h-[500px] ' src=".\src\assets\team.jpg" alt="" />
+      </div>
       </div>
     </>
   );

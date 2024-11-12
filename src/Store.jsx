@@ -5,23 +5,22 @@ import Header from './Header';
 export default function Store() {
   return (
     <>
-    <div className='bg-green-400'>
+    <div className='bg-green-400 dark:bg-gray-900 dark:text-white'>
       <Header/>
     </div>
     
-    <div className='flex justify-center items-center flex-col pt-5'>
+    <div className='dark:bg-gray-900 dark:text-white flex justify-center items-center flex-col pt-5'>
       
-      <div className='box-border border-black border-collapse border-3 lg:box-border lg:border-1 lg:w-[1000px] lg:flex lg:justify-center lg:items-center lg:gap-x-5 lg:font-serif lg:p-6 lg:rounded-lg lg:border-collapse lg:border-black lg:shadow-lg lg:bg-slate-100 lg:text-md font-serif font-bold flex justify-center items-center gap-x-3 '>
-        <span className='cursor-pointer hidden md:inline'>Calculator</span>
-        <span className=' '><a href="#setup">Setups</a></span>
-        <span className=' '><a href="#automation">Automation</a></span>
-        <span className='hidden md:inline'><a href="#organic ">Fresh Vegetables</a></span>
-        <span className='lg:hidden'><a href="#organic ">veggies</a></span>
+      <div className='dark:bg-gray-900 dark:text-white lg:box-border lg:border-1 lg:w-[1000px] lg:flex lg:justify-center lg:items-center lg:gap-x-5 lg:font-serif lg:p-6 lg:rounded-lg lg:border-collapse lg:border-black lg:shadow-lg lg:bg-slate-100 lg:text-md'>
+      <span className='cursor-pointer'>Calculator</span>
+        <span><a href="#setup">Setups</a></span>
+        <span><a href="#automation">Automation</a></span>
+        <span><a href="#organic">Fresh Vegetables</a></span>
         <span className='cursor-pointer'>Nutirents</span>
         
       </div>
 
-      <div className='lg:flex lg:flex-col lg:border-2 lg:w-[1000px] lg:gap-2 lg:p-2 lg:pt-3'>
+      <div className='dark:bg-gray-900 dark:text-white lg:flex lg:flex-col lg:border-2 lg:w-[1000px] lg:gap-2 lg:p-2 lg:pt-3'>
   <h1 className='lg:flex lg:justify-center lg:items-center lg:text-4xl lg:font-bold lg:font-serif'>Munafa Meter</h1>
   
   <form onSubmit="handleSubmit(event)" className='lg:flex lg:flex-col lg:gap-2 lg:p-2'>
