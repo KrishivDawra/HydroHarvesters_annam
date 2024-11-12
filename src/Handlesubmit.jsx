@@ -1,4 +1,4 @@
-    function handleSubmit(event) {
+export function Handlesubmit(event) {
         event.preventDefault();
 
         const area = document.getElementById("area").value;

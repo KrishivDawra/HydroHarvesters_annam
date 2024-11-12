@@ -1,63 +1,62 @@
 import React, { useEffect } from 'react';
 import Header from './Header';
+import { Handlesubmit } from './Handlesubmit';
 
 
 export default function Store() {
   return (
-    <>
+    <div className='dark:bg-gray-900 dark:text-white'>
     <div className='bg-green-400 dark:bg-gray-900 dark:text-white'>
       <Header/>
     </div>
     
-    <div className='dark:bg-gray-900 dark:text-white flex justify-center items-center flex-col pt-5'>
-      
-      <div className='dark:bg-gray-900 dark:text-white lg:box-border lg:border-1 lg:w-[1000px] lg:flex lg:justify-center lg:items-center lg:gap-x-5 lg:font-serif lg:p-6 lg:rounded-lg lg:border-collapse lg:border-black lg:shadow-lg lg:bg-slate-100 lg:text-md'>
-      <span className='cursor-pointer'>Calculator</span>
-        <span><a href="#setup">Setups</a></span>
-        <span><a href="#automation">Automation</a></span>
-        <span><a href="#organic">Fresh Vegetables</a></span>
-        <span className='cursor-pointer'>Nutirents</span>
-        
-      </div>
+    <div className="dark:bg-gray-900 dark:text-white flex justify-center items-center flex-col pt-5">
+            
+            <div className="dark:bg-gray-900 dark:text-white lg:box-border lg:border-1 lg:w-[1000px] lg:flex lg:justify-center lg:items-center lg:gap-x-5 lg:font-serif lg:p-6 lg:rounded-lg lg:border-collapse lg:border-black lg:shadow-lg lg:bg-slate-100 lg:text-md">
+                <span className="cursor-pointer">Calculator</span>
+                <span><a href="#setup">Setups</a></span>
+                <span><a href="#automation">Automation</a></span>
+                <span><a href="#organic">Fresh Vegetables</a></span>
+                <span className="cursor-pointer">Nutrients</span>
+            </div>
 
-      <div className='dark:bg-gray-900 dark:text-white lg:flex lg:flex-col lg:border-2 lg:w-[1000px] lg:gap-2 lg:p-2 lg:pt-3'>
-  <h1 className='lg:flex lg:justify-center lg:items-center lg:text-4xl lg:font-bold lg:font-serif'>Munafa Meter</h1>
-  
-  <form onSubmit="handleSubmit(event)" className='lg:flex lg:flex-col lg:gap-2 lg:p-2'>
-    <div className='lg:flex lg:gap-x-2'>
-      <label htmlFor="area" className='lg:px-1 lg:py-2'>Select Area in</label>
-      <select name="area" id="area" className='bg-slate-100 lg:w-[850px] lg:px-1 lg:py-2 lg:rounded-md font-serif'>
-        <option value="Select">Select</option>
-        <option value="Sq/Feet">Sq-Feet</option>
-        <option value="Acre">Acres</option>
-        <option value="Beegha">Beeghe</option>
-      </select>
-    </div>
-    
-    <input type="number" name="areaValue" id="areaValue" className='bg-slate-100 lg:px-1 lg:py-2 lg:rounded-md font-serif' placeholder='Enter Area'/>
-    <input type="text" className='bg-slate-100 lg:px-1 lg:py-2 lg:rounded-md font-serif' placeholder='Enter State' />
-    
-    <div className='lg:flex lg:gap-x-2'>
-      <label htmlFor="type" className='lg:px-1 lg:py-2'>Select type:</label>
-      <select name="type" id="type" className='bg-slate-100 lg:w-[865px] lg:px-1 lg:py-2 lg:rounded-md font-serif'>
-        <option value="Select">Select</option>
-        <option value="Horizontal">Horizontal Farming</option>
-        <option value="Vertical">Vertical Farming</option>
-        <option value="A-Shape">A-Shape Farming</option>
-        <option value="Hydro Harvesters Special">Hydro Harvesters Special</option>
-      </select>
-    </div>
-    
-    
-    <button type="submit" className='lg:bg-green-500 lg:text-white lg:px-4 lg:py-2 lg:rounded-md lg:mt-3'>Calculate Profit</button>
-
- 
-    <p id="result" className='text-xl font-serif lg:mt-4'></p>
-  </form>
-</div>
+            <div className="lg:flex lg:flex-col lg:border-2 lg:w-[1000px] lg:gap-2 lg:p-2 lg:pt-3">
+                <h1 className="lg:flex lg:justify-center lg:items-center lg:text-4xl lg:font-bold lg:font-serif">Munafa Meter</h1>
+                
+                <form onSubmit={Handlesubmit} className="lg:flex lg:flex-col lg:gap-2 lg:p-2">
+                    <div className="lg:flex lg:gap-x-2">
+                        <label htmlFor="area" className="lg:px-1 lg:py-2">Select Area in</label>
+                        <select name="area" id="area" className="bg-slate-100 dark:text-black lg:w-[850px] lg:px-1 lg:py-2 lg:rounded-md font-serif">
+                            <option value="Select">Select</option>
+                            <option value="Sq/Feet">Sq-Feet</option>
+                            <option value="Acre">Acres</option>
+                            <option value="Beegha">Beeghe</option>
+                        </select>
+                    </div>
+                    
+                    <input type="number" name="areaValue" id="areaValue" className="bg-slate-100 dark:text-black lg:px-1 lg:py-2 lg:rounded-md font-serif" placeholder="Enter Area"/>
+                    <input type="text" className="bg-slate-100 lg:px-1 lg:py-2 dark:text-black lg:rounded-md font-serif" placeholder="Enter State" />
+                    
+                    <div className="lg:flex lg:gap-x-2">
+                        <label htmlFor="type" className="lg:px-1 lg:py-2">Select type:</label>
+                        <select name="type" id="type" className="dark:text-black bg-slate-100 lg:w-[865px] lg:px-1 lg:py-2 lg:rounded-md font-serif">
+                            <option value="Select">Select</option>
+                            <option value="Horizontal">Horizontal Farming</option>
+                            <option value="Vertical">Vertical Farming</option>
+                            <option value="A-Shape">A-Shape Farming</option>
+                            <option value="Hydro Harvesters Special">Hydro Harvesters Special</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" className="lg:bg-green-500 lg:text-white lg:px-4 lg:py-2 lg:rounded-md lg:mt-3">Calculate Profit</button>
+                
+                    <p id="result" className="text-xl font-serif lg:mt-4"></p>
+                </form>
+            </div>
+        </div>
 
 
-      <h1 className='lg:text-4xl lg:font-serif lg:font-bold lg:pt-8 lg:pb-6' id='setup'>HydroPonic Setups</h1>
+      <h1 className='lg:text-4xl lg:font-serif lg:font-bold lg:pt-8 lg:pb-6 flex justify-center' id='setup'>HydroPonic Setups</h1>
 
       <div className='lg:flex lg:flex-col lg:gap-8'>
 
@@ -108,7 +107,7 @@ export default function Store() {
 
 
 
-      <h1 className='lg:text-4xl lg:font-serif lg:font-bold lg:pt-8 lg:pb-6' id='automation'>Automation Services</h1>
+      <h1 className='lg:text-4xl lg:font-serif lg:font-bold lg:pt-8 lg:pb-6 flex justify-center' id='automation'>Automation Services</h1>
 
       <div className='lg:flex lg:flex-col lg:gap-8'>
 
@@ -131,7 +130,7 @@ export default function Store() {
 
 
 
-      <h1 className='lg:text-4xl lg:font-serif lg:font-bold lg:pt-8 lg:pb-6' id='organic'>Organic Vegetables</h1>
+      <h1 className='lg:text-4xl lg:font-serif lg:font-bold lg:pt-8 lg:pb-6 flex justify-center' id='organic'>Organic Vegetables</h1>
 
       <div className='lg:flex lg:flex-col lg:gap-8'>
 
@@ -203,8 +202,7 @@ export default function Store() {
 
 
     </div>
-    <script src="scriptstore.js"></script>
-    </>
+
   )
 
 }
