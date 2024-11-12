@@ -10,11 +10,11 @@ export default function Consult() {
   return (
     <>
     
-    <div>
-    <div className='bg-green-400 '>
+    <div className='dark:bg-gray-900 dark:text-white'>
+    <div className='bg-green-400 dark:bg-gray-900 dark:text-white'>
               <Header/>
           </div>
-    <div className="h-screen bg-white text-black flex flex-col items-center justify-center">
+    <div className="h-screen dark:bg-gray-900 dark:text-white bg-white text-black flex flex-col items-center justify-center">
     
       {/* Top bar */}
       <div className="w-full px-6 py-3 flex justify-between items-center bg-green-400 fixed top-0 lg:hidden">
@@ -131,7 +131,7 @@ export default function Consult() {
       </div>
 
       {/* Main Section */}
-      <div className="flex flex-col items-center  space-y-6">
+      <div className="flex flex-col items-center  space-y-6 ">
         <h1 className="text-3xl font-semibold text-green">What can I help with? <span className="animate-ping">●</span></h1>
 
         {/* Input Section */}

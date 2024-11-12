@@ -1,8 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Login.css'
 import { Link } from 'react-router-dom'
-
+import {
+  RiMenu3Fill,
+  RiCloseFill,
+  RiMoonFill,
+  RiSunFill,
+} from "react-icons/ri";
 const Header = () => {
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
+  };
+
+
   const [isOpen, setIsOpen] = useState(false);
   let [modelstatus,setModelstatus] = useState(false)
   return (
@@ -73,17 +90,22 @@ const Header = () => {
 
       
     </div>
-    <div className='lg:flex lg:justify-between lg:bg-transparent lg:align-baseline hidden'>
+    <div className=' lg:flex lg:justify-between lg:bg-transparent lg:align-baseline hidden'>
       <img className='h-[90px] w-[110px] rounded-full size-48 ' src=".\src\assets\logo123-removebg-preview.png" alt="" />
         <ul className='lg:flex lg:space-x-4 lg:py-8 lg:text-inherit '>
-            <li className='font-serif font-semibold  hover:text-black'><Link to = {'/'}> Home</Link></li>
-            <li className='font-serif font-semibold  hover:text-black'><Link to={'/store'}>Products</Link></li>
-            <li className='font-serif font-semibold  hover:text-black'><Link to={'/consult'}>consultencies</Link></li>
-            <li className='font-serif font-semibold  hover:text-black'><Link to={'/About-us'}> About Us</Link></li>
+            <li className='font-serif font-semibold dark:hover:text-black pl-40 hover:text-black'><Link to = {'/'}> Home</Link></li>
+            <li className='font-serif font-semibold dark:hover:text-black hover:text-black'><Link to={'/store'}>Products</Link></li>
+            <li className='font-serif font-semibold dark:hover:text-black hover:text-black'><Link to={'/consult'}>consultencies</Link></li>
+            <li className='font-serif font-semibold dark:hover:text-black hover:text-black'><Link to={'/About-us'}> About Us</Link></li>
+            
         </ul>
+        <div>
+        </div>
         <div className='py-5'>
-            <a className='pr-2 cursor-pointer ' onClick={()=> setModelstatus(true)}>Login </a>
-            <button className='bg-gradient-to-r from-orange-400 to-red-500 px-4 py-2 rounded-xl mr-2'>Join Us</button>
+        <a onClick={toggleTheme} className="   fixed right-40   cursor-pointer  mr-2 mt-2.5 text-black  dark:text-white text-[1.3rem] ">{theme === "light" ? <RiMoonFill /> : <RiSunFill />} </a>
+        
+          <a className='pr-2 cursor-pointer  ' onClick={()=> setModelstatus(true)}>Login </a>
+          <button className='bg-gradient-to-r from-orange-400 to-red-500 px-4 py-2 rounded-xl mr-2'>Join Us</button>
         </div>
     </div>
     <div className="w-full px-6 py-3 flex justify-between items-center bg-transparent  top-0 lg:hidden">

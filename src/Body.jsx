@@ -5,6 +5,9 @@ import  { useState } from 'react'
 import { useEffect } from 'react'
 
 const Body = () => {
+
+  
+
   let [btnstatus, setBTNstatus] = useState(false);
   const [stickyHeader, setStickyHeader] = useState(false);
 
@@ -63,7 +66,7 @@ const Body = () => {
 
     <div className={` w-full fixed  ${
         stickyHeader
-          ? " lg:bg-green-400 text-black"
+          ? " lg:bg-green-400 dark:text-white  dark:bg-transparent dark:bg-blend-normal"
           : "bg-transparent bg-blend-normal  z-50 text-pale_Green "
       }`}><Header /></div>
       
@@ -105,7 +108,7 @@ const Body = () => {
     </div>
 
 
-    <div className='pt-28	'>
+    <div className='pt-28	dark:bg-gray-900 dark:text-white'>
       <div className='flex px-16'>
         <div className='pt-24 pr-10 space-y-6'>
         <h1 className='font-serif text-6xl'>Hydro Harvesters: Cultivating Tomorrow’s Harvests, Today’s Savings!</h1>
@@ -188,7 +191,7 @@ const Body = () => {
 
 
 
-        <div className='py-10 bg-green-400 space-y-4 pb-16'>
+        <div className='py-10 bg-green-400 space-y-4 pb-16 dark:bg-gray-800 dark:text-white'>
           <h1 className='text-5xl font-bold flex justify-center items-center'>Need guidance?</h1>
           <h2 className='text-lg flex justify-center items-center'>We would like to help you.</h2>
 
@@ -201,6 +204,9 @@ const Body = () => {
             <div className="flex gap-1 bg-green-500 px-3 py-2 border-green-500 rounded-xl hover:border-white">
               <img src="./src/assets/call.png" alt="" />
               <button>Contact Us!</button>
+            </div>
+            <div className="mt-12 text-gray-500 text-sm fixed bottom-2">
+              © 2024 HydroHarvesters, Inc. all rights are reserved & protected
             </div>
           </div>
         </div>
