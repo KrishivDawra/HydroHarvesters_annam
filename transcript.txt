@@ -1,0 +1,18 @@
+Hydro Harvesters - Project Transcript
+
+Hello judges, I'm Krishiv Dawra, and this is our project — Hydro Harvesters.
+
+Hydro Harvesters is a solution to the increasing cost of vegetables and the low profits that farmers receive from traditional farming. Our system uses soilless farming, known as hydroponics, which increases yield up to 7 times and produces better quality crops.
+
+We built an automated system using NodeMCU, sensors, and relay modules to control nutrient flow and water cycles. The entire setup is powered using solar energy, reducing dependency on electricity and making it viable even in remote rural areas.
+
+Farmers can monitor and control the system using their smartphone via the Blynk app. We're also developing a web dashboard for better visibility and planning.
+
+Our goal is to help farmers produce high-quality organic vegetables at a lower cost and connect them directly with urban buyers, eliminating middlemen.
+
+Thank you for watching!
+
+Team:
+- Krishiv Dawra (CEO and Lead Developer)
+- Namit Dawra (CTO)
+
